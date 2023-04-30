@@ -37,6 +37,7 @@ async function addContact(name, email, phone) {
         phone,
         id: nanoid()
     })
+    console.table(parseContacts)
     await fs.writeFile(contactsPath, JSON.stringify(parseContacts,null,2))
     return newContact;
 }
